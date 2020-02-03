@@ -1,6 +1,6 @@
 
 
-# <img src="guiltyspark.png" width=20/>GuiltySpark
+# <img src="guiltyspark.png" width=50/>GuiltySpark
 [![Build Status](https://travis-ci.org/ShaneMalachow/GuiltySpark.svg?branch=master)](https://travis-ci.org/ShaneMalachow/GuiltySpark)
 
 
