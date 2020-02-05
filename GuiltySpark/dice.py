@@ -72,7 +72,7 @@ class Roll(numbers.Number):
 
 
 def roll(string: str) -> str:
-    match = regex.match(roll_regex, string)
+    match = regex.match(ROLL_REGEX, string)
     groups = match.capturesdict()
     num = int(groups['num'][0])
     die = int(groups['die'][0])

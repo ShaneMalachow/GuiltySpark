@@ -26,7 +26,7 @@ class GuiltySpark(discord.Client):
                 if user == self.user and message.content.strip().startswith('<@!%d>' % self.user.id):
                     log('Mentioned in #%s in %s' % (message.channel, message.guild))
                     log('Message: %s' % message.content)
-                    content = message.content.replace('<@!%d>' % self.user.id, '').lower()
+                    content = message.content.replace('<@!%d>' % self.user.id, '').lower().strip()
                     if 'hello' in content.lower():
                         await message.channel.send("Hello %s! My name is 343 Guilty Spark. Nice to meet you!" %
                                                    message.author.mention)
