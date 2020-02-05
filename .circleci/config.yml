@@ -13,6 +13,7 @@ jobs:
             virtualenv venv
             . venv/bin/activate
             pip install --no-cache-dir -r requirements.txt
+      - setup_remote_docker
       - run:
           name: Build Docker Image
           command: |
