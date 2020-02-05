@@ -10,6 +10,12 @@ jobs:
           command: |
             echo 'export TAG=ci' >> $BASH_ENV
             echo 'export IMAGE_NAME=shanemalachow/guiltyspark' >> $BASH_ENV
+      - run:
+          name: Code Coverage
+          command: |
+            pip install codecov pytest pytest-cov
+            pytest --cov=./
+            codecov
       - setup_remote_docker:
       - run:
           name: Build Docker Image
