@@ -8,7 +8,7 @@ jobs:
       - run:
           name: Setup
           command: |
-            echo 'export TAG=build-${CIRCLE_BUILD_NUM}' >> $BASH_ENV
+            echo 'export TAG=ci' >> $BASH_ENV
             echo 'export IMAGE_NAME=shanemalachow/guiltyspark' >> $BASH_ENV
       - setup_remote_docker:
       - run:
