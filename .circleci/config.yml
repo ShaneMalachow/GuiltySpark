@@ -13,7 +13,8 @@ jobs:
       - run:
           name: Code Coverage
           command: |
-            pip install codecov
+            pip install codecov pytest pytest-cov
+            pytest --cov=./
             codecov
       - setup_remote_docker:
       - run:
