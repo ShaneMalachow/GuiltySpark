@@ -2,6 +2,8 @@ import numbers
 import random
 import regex
 
+ROLL_REGEX = r'(?P<num>\d+)d(?P<die>\d+)(?P<keep>kl?\d*)?(?P<mod>[\+\-]\d+)?'
+
 
 class Roll(numbers.Number):
     def __init__(self, value):
@@ -70,8 +72,7 @@ class Roll(numbers.Number):
 
 
 def roll(string: str) -> str:
-    r = r'(?P<num>\d+)d(?P<die>\d+)(?P<keep>kl?\d*)?(?P<mod>[\+\-]\d+)?'
-    match = regex.match(r, string)
+    match = regex.match(roll_regex, string)
     groups = match.capturesdict()
     num = int(groups['num'][0])
     die = int(groups['die'][0])
